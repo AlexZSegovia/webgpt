@@ -1,0 +1,171 @@
+/* Estilos Generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Header */
+header {
+    background: #007bff;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+/* Contenedor General */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    color: #fff;
+    padding: 5rem 2rem;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://images.unsplash.com/photo-1555685815-d83081d0527d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fE1hcmljb3F1aXxlbnwwfHx8fDE2NjM1MTI3&ixlib=rb-1.2.1&q=80&w=1500') no-repeat center center/cover;
+    opacity: 0.5; /* Ajusta la opacidad de la imagen de fondo aquí */
+    z-index: -1; /* Asegura que la capa esté detrás del contenido */
+}
+
+.hero .container {
+    position: relative;
+    z-index: 1; /* Asegura que el contenido esté encima de la capa */
+}
+
+/* Servicios */
+.services {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.services h2 {
+    margin: 0 0 1rem 0;
+    font-size: 2rem;
+}
+
+.service {
+    margin: 1rem;
+    display: inline-block;
+    width: calc(33% - 2rem);
+    vertical-align: top;
+    opacity: 0; /* Inicialmente oculto */
+    transition: opacity 1s ease-in-out; /* Transición suave para el desvanecimiento */
+}
+
+.service.fade-in {
+    opacity: 1; /* Totalmente visible cuando se activa la clase fade-in */
+}
+
+.service img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    opacity: 0.8; /* Ajusta la opacidad aquí */
+    transition: opacity 0.3s; /* Transición suave para el cambio de opacidad */
+}
+
+.service img:hover {
+    opacity: 1.0; /* Imagen completamente opaca al pasar el mouse sobre ella */
+}
+
+.service h3 {
+    font-size: 1.5rem;
+}
+
+.service p {
+    font-size: 1rem;
+}
+
+/* Sobre Nosotros */
+.about {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.about h2 {
+    margin: 0 0 1rem 0;
+    font-size: 2rem;
+}
+
+.info {
+    margin: 1rem;
+    display: inline-block;
+    width: calc(50% - 2rem);
+    vertical-align: top;
+}
+
+.info img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    opacity: 0.8; /* Ajusta la opacidad aquí */
+    transition: opacity 0.3s; /* Transición suave para el cambio de opacidad */
+}
+
+.info img:hover {
+    opacity: 1.0; /* Imagen completamente opaca al pasar el mouse sobre ella */
+}
+
+.info h3 {
+    font-size: 1.5rem;
+}
+
+.info p {
+    font-size: 1rem;
+}
+
+/* Footer */
+footer {
+    background: #f4f4f4;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+    .service, .info {
+        width: calc(100% - 2rem);
+    }
+    .hero h2 {
+        font-size: 2rem;
+    }
+    .hero p, .cta-button {
+        font-size: 1rem;
+    }
+}
